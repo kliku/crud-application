@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableColumn?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.front.CrudController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label fx:id="welcomeText"/>
+    <TextField fx:id="searchField" onKeyReleased="#onSearch"></TextField>
+
+    <TableView fx:id="companyTable">
+        <columns>
+            <TableColumn prefWidth="75.0" text="Nazwa firmy" fx:id="companyNameColumn"/>
+            <TableColumn prefWidth="75.0" text="Nip firmy" fx:id="companyNipColumn"/>
+            <TableColumn prefWidth="75.0" text="Akcje" fx:id="companyDeleteColumn"/>
+        </columns>
+    </TableView>
+
+    <TextField fx:id="companyNameTxtField" promptText="Nazwa firmy"/>
+    <TextField fx:id="companyNipTxtField" promptText="Nip firmy"/>
+    <Button onMouseClicked="#addCompany">Dodaj firmę</Button>
+    <TextField fx:id="employeeNameTxtField" promptText="Imię pracownika"/>
+    <TextField fx:id="employeeSurnameTxtField" promptText="Nazwisko pracownika"/>
+    <Button onMouseClicked="#addEmployee">Dodaj pracownika</Button>
+    <TableView fx:id="employeeTable">
+        <columns>
+            <TableColumn prefWidth="75.0" text="Imię" fx:id="employeeNameColumn"/>
+            <TableColumn prefWidth="75.0" text="Nazwisko" fx:id="employeeSurnameColumn"/>
+        </columns>
+    </TableView>
+
+</VBox>
